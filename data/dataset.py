@@ -3,6 +3,7 @@
 import os
 import numpy as np
 import torch
+from PIL import Image
 import scipy.io
 from torch.utils.data import Dataset
 
@@ -22,8 +23,8 @@ class StanfordCars(Dataset):
     
     def __getitem__(self, index):
         image_name = os.path.join(self.data_dir, self.car_annotations[index][-1][0])
-        image = Image.open(img_name).convert('RGB')
-        car_class = self.car_annotations[idx][-2][0][0]
+        image = Image.open(image_name).convert('RGB')
+        car_class = self.car_annotations[index][-2][0][0]
         car_class = torch.from_numpy(np.array(car_class.astype(np.float32))).long() - 1
         
         if self.transform:
