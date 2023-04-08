@@ -268,6 +268,6 @@ def convnext_xlarge(pretrained = False, im_22k = False, device = "cpu", **kwargs
 
 
 if __name__ == "__main__":
-    from torchsummary import summary
+    x = torch.randn(size = (1, 3, 224, 224))
     model = convnext_small(pretrained = True)
-    print(summary(model, (3, 224, 224), device = "cpu"))
+    print(model(x))
