@@ -34,7 +34,7 @@ def data_split(args):
 
     df_list_train, df_list_val = [], []
 
-    for class_id, n_per_class in enumerate(n_per_class_df['dir']):
+    for class_id, n_per_class in enumerate(n_per_class_df['name']):
         train_samples_class = int(n_per_class * args.train_ratio)
         val_samples_class = n_per_class - train_samples_class
 
