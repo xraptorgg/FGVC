@@ -35,7 +35,7 @@ class ConvNeXt(nn.Module):
         in_channelss (int): number of input image channels. Default: 3
         num_classes (int): number of classes for classification head. Default: 1000
         block_config (list(int)): number of blocks at each stage. Default: [3, 3, 9, 3]
-        stage_dims (int): Feature dimension at each stage. Default: [96, 192, 384, 768]
+        stage_dims (int): feature dimension at each stage. Default: [96, 192, 384, 768]
         drop_rate (float): stochastic depth rate. Default: 0.
         layer_init_scale (float): init value for Layer Scale. Default: 1e-6.
         head_init_scale (float): init scaling value for classifier weights and biases. Default: 1.
