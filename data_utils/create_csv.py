@@ -1,3 +1,6 @@
+# Code to create csv files from .mat files of annotations
+
+
 import csv
 import os
 import argparse

@@ -1,4 +1,4 @@
-# Python script to create datasets
+# Code to create custom datasets
 
 import os
 import numpy as np
